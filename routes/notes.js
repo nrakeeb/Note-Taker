@@ -3,11 +3,12 @@ const router = express.Router();
 const readAndAppend = require('../helpers/readAndAppend');
 const readFromFile = require('../helpers/readFromFile');
 
-const noteData = require('../db/db.json');
 const uuid = require('../helpers/uuid');
 
-router.get('/', (req, res) => res.json(noteData));
-
+router.get('/', (req, res) => {
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+});
+    
 router.post('/', (req, res) => {
 
 const {title, text} = req.body;
