@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const readAndAppend = require('../helpers/readAndAppend')
+const readAndAppend = require('../helpers/readAndAppend');
+const readFromFile = require('../helpers/readFromFile');
 
 const noteData = require('../db/db.json');
 const uuid = require('../helpers/uuid');

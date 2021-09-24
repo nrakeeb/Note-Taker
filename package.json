@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
+    "util": "^0.12.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {},
