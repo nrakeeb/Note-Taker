@@ -20,7 +20,7 @@ if (title && text) {
         id: uuid()
     };
 
-    readAndAppend(newNote, './db/db.json')
+    readAndAppend(newNote, './db/db.json');
 
     const response = {
         status: 'success',
@@ -30,10 +30,12 @@ if (title && text) {
     console.log(response);
     res.status(201).json(response);
 } else {
-    res.status(500).json('Error')
+    res.status(500).json('Error');
 }
 });
 
-//router.delete('/api/notes/:id', (req, res) => )
+router.delete('/:id', (req, res) => {
+    console.log("success!");
+})
 
 module.exports = router;
