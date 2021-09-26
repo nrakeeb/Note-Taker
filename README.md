@@ -23,3 +23,6 @@ You will then be prompted with a localhost link which the app is listening on. O
 - Heroku
 
 ## Screenshots
+
+![Note1](https://user-images.githubusercontent.com/82734765/134825802-25ecf3b4-5d5b-4611-ae2a-c4238a1c70e8.JPG)
+![Note2](https://user-images.githubusercontent.com/82734765/134825805-1bba6025-99ac-41b9-ade0-26117940afed.JPG)
