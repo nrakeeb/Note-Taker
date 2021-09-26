@@ -23,11 +23,10 @@ if (title && text) {
     helpers.readAndAppend(newNote, './db/db.json');
 
     const response = {
-        status: 'success',
+        status: 'Successfully added note',
         body: newNote
     };
 
-    console.log(response);
     res.status(201).json(response);
 } else {
     res.status(500).json('Error');
@@ -45,6 +44,12 @@ router.delete('/:id', (req, res) => {
        });
        helpers.writeToFile('./db/db.json', parsedNotes);
     }
-)})
+)
+const response = {
+    status: 'Successfully deleted note'
+};
+
+res.status(200).json(response);
+})
 
 module.exports = router;
