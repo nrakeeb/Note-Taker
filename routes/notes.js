@@ -1,4 +1,3 @@
-const { json } = require('express');
 const express = require('express');
 const router = express.Router();
 const helpers = require('../helpers/readAndAppend');
@@ -42,7 +41,6 @@ router.delete('/:id', (req, res) => {
     parsedNotes.forEach(note => {
            if(note.id == noteId) {
                parsedNotes.splice(note, 1)
-               //parsedNotes.pop(indexof(note));
            }  
        });
        helpers.writeToFile('./db/db.json', parsedNotes);
