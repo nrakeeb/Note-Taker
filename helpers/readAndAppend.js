@@ -12,9 +12,12 @@ const readAndAppend = (content, file) => {
         } else {
             const parsedNotes = JSON.parse(data);
             parsedNotes.push(content);
-            writeToFile(file, parsedNotes)
+            writeToFile(file, parsedNotes);
         }
     });
 };
 
-module.exports = readAndAppend;
+module.exports = {
+    readAndAppend,
+    writeToFile
+}
